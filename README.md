@@ -8,7 +8,7 @@ This document describes how to use ISL ITAEngine software that is provided. The 
 
 # Requirements
 
-## Compiler - Mono/C\#
+## Compiler - Mono/C\# ##
 
 The library is written in C#. Mono is the environment used to build the software. This is the only piece of software that is required to be obtained and installed on the testing computer. The ITA is built and tested using the version of Mono that is released with Unity 3.5.x which is 2.6.x. This limits the use of C# .Net APIs to 3.5 and below. Unity's version of Mono also has some functionality removed. While the APIs distributed by Unity are limited, this will not affect the ability of a developer to use versions of Mono directly from the website. 
 
