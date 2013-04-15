@@ -170,6 +170,7 @@ Unique identifiers are required for all data items of the same type. The interna
 
 The following is a notional data file layout that describes the data necessary to load data into the ITA. Note that information that would need to be presented to the student is not included. That data could be kept in the same file or in separate files depending on your needs. The morse code examples have two different data file layouts. In UnityMorseMinimal, there is a file called morsecode_data.xml. It contains all data needed in one file. In the MorseCode project, there is a data directory that contains two files that describe the data. 
 
+```
 problemGroup id="1" skills="1"
     problem id="1" timesAttempted="0" timeCorrect="0" lastAttempt="0" thresholdTime="0"
     problem id="2" timesAttempted="0" timeCorrect="0" lastAttempt="0" thresholdTime="0"
@@ -209,7 +210,7 @@ problemLinkage
     problem id="5"
         asset id="3"
         asset id="6"
-
+```
 
 The following diagram presents the data layout from a class perspective. Unless you are modifying the library, it's not necessary that for you to have to understand how this works. 
 
