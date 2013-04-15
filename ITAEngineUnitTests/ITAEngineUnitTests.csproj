@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83829523-E5EA-489D-9E40-DD78585D6BFD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ITAEngineUnitTests</RootNamespace>
+    <AssemblyName>ITAEngineUnitTests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="ITAEngine">
+      <HintPath>..\ITAEngine\bin\Debug\ITAEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files %28x86%29\Mono-2.6.7\lib\mono\gac\nunit.framework\2.4.8.0__96d09a1eb7f44a77\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="src\tests\DefaultITAEngineManagerTest.cs" />
+    <Compile Include="src\tests\DefaultAssessmentTest.cs" />
+    <Compile Include="src\tests\Inner\AssetHeuristicEngineTest.cs" />
+    <Compile Include="src\tests\Inner\AssetsDataManagerTest.cs" />
+    <Compile Include="src\tests\Inner\ProblemDataManagerTest.cs" />
+    <Compile Include="src\tests\Inner\SkillsDataManagerTest.cs" />
+    <Compile Include="src\tests\DefaultAssessmentBuilderTest.cs" />
+    <Compile Include="src\tests\DefaultAssetRecommendationEngineTest.cs" />
+    <Compile Include="src\tests\Inner\GroupLinkageManagerTest.cs" />
+    <Compile Include="src\tests\Inner\ProblemLinkageManagerTest.cs" />
+    <Compile Include="src\tests\Inner\StopWatchManagerTest.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="src\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ITAEngine\ITAEngine.csproj">
+      <Project>{4368D4DE-0CDB-49BC-851E-C7BA8ABC38ED}</Project>
+      <Name>ITAEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

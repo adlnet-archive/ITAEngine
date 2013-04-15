@@ -1,0 +1,71 @@
+<test type="functional" name="Successful Assessment">
+	<description>The test loads problem data into into the ITAEngine.  An assessment is created and all problems are marked as completed. The score data will be verified.  
+	</description>
+	<data_description>The data required for this test is limited to a five problems. Only a minimal amount of asset data will be loaded since the test doesn't evaluate asset suggestions.
+	</data_description>
+	<procedures>
+		<item>
+			<action>Load data into the ITAEngine.  This requires problem, skill, and asset data.</action>
+			<api>ITAEngine.AssociateAssessmentProblemsWithSkill, ITAEngine.AssociateAssetWithSkill </api>
+		</item>
+		<item>
+			<action>Create an assessment builder.</action>
+			<api>ITAEngine.CreateAssessmentBuilder</api>
+		</item>
+		<item>
+			<action>Set the number of problems to be used for the assessment to be 5.</action>
+			<api>AssessmentBuilder.AddProblem</api>
+		</item>
+		<item>
+			<action>Create an Assessment.</action>
+			<api>AssessmentBuilder.Build</api>
+		</item>
+		<item>
+			<action>Get the problem sequence from the Assessment.</action>
+			<api>Assessment.GetProblemSequence</api>
+		</item>
+		<item>
+			<action>Mark first problem completed.</action>
+			<api>Assessment.MarkCompleted.</api>
+			<observe>Verify that the ActionResponse is not in a failed.</observe>
+			<api>Interface=>AssessmentActionResponse</api>
+		</item>
+		<item>
+			<action>Continue the process of marking and verifying problems.</action>
+		</item>
+		<item>
+			<action>Close the assessment and capture the CompletionResponse.</action>
+			<api> Assessment.MarkCompleted</api> 
+			<observe>Verify that the data returned from the AssessmentCompletionResponse is correct.</observe>
+			<api>Interface=>AssessmentCompletionResponse</api>
+		</item>
+	</procedures>
+	<results>All problems will be marked as completed and successful.  The assessment and challenge will be marked as completed as successful.
+	</results>
+	
+	<test_script>
+		<assessment problem_count = "5" mark_all = "true" expect_success="true" group_id="1"/>
+	</test_script>
+	<test_data>
+		<problems>
+			<problem tags="1" isChallenge="false" UID="1" GroupID="1"/>
+			<problem tags="1" isChallenge="false" UID="2" GroupID="1"/>
+			<problem tags="1" isChallenge="false" UID="3" GroupID="1"/>
+			<problem tags="1" isChallenge="false" UID="4" GroupID="1"/>
+			<problem tags="1" isChallenge="false" UID="5" GroupID="1"/>
+		</problems>
+		<skills>
+			<skill name="test1" id="1">
+				<asset id="1" type="A"/>
+			</skill>
+			<skill name="test2" id="2">
+				<asset id="2" type="a"/>
+			</skill>
+			<skill name="test3" id="3">
+				<asset id="3" type="a"/>
+			</skill>
+		</skills>
+	</test_data>
+
+</test>
+	

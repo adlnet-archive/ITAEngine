@@ -1,0 +1,61 @@
+<test type="functional" name="Skill List for Assessment">
+	<description>This test verifies that the list of skills returned for an 
+	assessment is correct. The test loads problem data into into the 
+	ITAEngine.  An assessment is created and the list of skills is retrieved.  It's 
+	compared against the skill list to be expected.
+	</description>
+	<data_description>The problem data required for this test is limited to a 
+	five problems.  Each problem will have a different skill id with the same 
+	problem group identifier.  The asset list is minimal.  
+	</data_description>
+	<procedures>
+		<item>
+			<action>Load data into the ITAEngine.  This requires problem, skill, and asset data.</action>
+			<api>ITAEngine.AssociateAssessmentProblemsWithSkill, ITAEngine.AssociateAssetWithSkill </api>
+		</item>
+		<item>
+			<action>Create an assessment builder.</action>
+			<api>ITAEngine.CreateAssessmentBuilder</api>
+		</item>
+		<item>
+			<action>Set the number of problems to be used for the assessment to be 5.</action>
+			<api>AssessmentBuilder.AddProblem</api>
+		</item>
+		<item>
+			<action>Create an Assessment.</action>
+			<api>AssessmentBuilder.Build</api>
+		</item>
+		<item>
+			<action>Get the skill list from the Assessment.</action>
+			<api>Assessment.GetSkills </api>
+			<observe>Verify skill list matches the problem skill list.</observe>
+		</item>
+	</procedures>
+	<results>Skill lists should match.
+	</results>
+	
+	<test_script>
+		<assessment problem_count = "5" mark_all = "false" expect_success="false" group_id="1"> 
+			<verify_skills list="A,B" />
+		</assessment>
+	</test_script>
+	<test_data>
+		<problems>
+			<problem tags="A,B" isChallenge="false" UID="1" GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="2" GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="3" GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="4" GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="5" GroupID="1"/>
+		</problems>
+		<skills>
+			<skill name="test1" id="A">
+				<asset id="AA" type="Z"/>
+			</skill>
+			<skill name="test2" id="B">
+				<asset id="BB" type="Y"/>
+			</skill>
+		</skills>
+	</test_data>
+
+</test>
+	

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF5921C8-1D51-411C-892B-DF031045B1BA}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MorseCode</RootNamespace>
+    <AssemblyName>MorseCode</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Externalconsole>True</Externalconsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="ITAEngine">
+      <HintPath>..\..\ITAEngine\bin\Debug\ITAEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\..\..\..\..\..\..\..\Program Files %28x86%29\Mono-2.6.7\lib\mono\gac\nunit.framework\2.4.8.0__96d09a1eb7f44a77\nunit.framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="src\Translate.cs" />
+    <Compile Include="tests\TranslateTests.cs" />
+    <Compile Include="src\MorseKeyTable.cs" />
+    <Compile Include="tests\MorseKeyTableTests.cs" />
+    <Compile Include="src\ProblemData.cs" />
+    <Compile Include="src\ProblemDataXMLLoader.cs" />
+    <Compile Include="src\LoadData.cs" />
+    <Compile Include="src\DataManager.cs" />
+    <Compile Include="src\AssetData.cs" />
+    <Compile Include="src\SkillData.cs" />
+    <Compile Include="src\SkillAssetXmlLoader.cs" />
+    <Compile Include="src\ActionResponse.cs" />
+    <Compile Include="src\CompletionResponse.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="tests\" />
+    <Folder Include="data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\problems.xml" />
+    <None Include="data\skill.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ITAEngine\ITAEngine.csproj">
+      <Project>{4368D4DE-0CDB-49BC-851E-C7BA8ABC38ED}</Project>
+      <Name>ITAEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

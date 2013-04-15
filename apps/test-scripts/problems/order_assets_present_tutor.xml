@@ -1,0 +1,121 @@
+<test type="functional" name="Order of Assets Presented for Tutoring">
+	<description>This test verifies that assets presented for tutoring are ordered based on past user preference.  
+	</description>
+	<data_description>The data set requires 10 problems.  There are two problem groups with five problems each.  There are four skills; two for each group.  A larger asset list required. There should be three types of assets with three assets for each skill. 
+	</data_description>
+	<procedures>
+		<item>
+			<action>Load data into the ITAEngine.  This requires problem, skill, and asset data.</action>
+			<api>ITAEngine.AssociateAssessmentProblemsWithSkill, ITAEngine.AssociateAssetWithSkill </api>
+		</item>
+		<item>
+			<action>Create an assessment builder.</action>
+			<api>ITAEngine.CreateAssessmentBuilder</api>
+		</item>
+		<item>
+			<action>Set the number of problems to be used for the assessment to be 2.</action>
+			<api>AssessmentBuilder.AddProblem</api>
+		</item>
+		<item>
+			<action>Create an Assessment</action>
+			<api>AssessmentBuilder.Build</api>
+		</item>
+		<item>
+			<action>Get the problem sequence from the Assessment.</action>
+			<api>Assessment.GetProblemSequence</api>
+		</item>
+		<item>
+			<action>Mark each problem as failed. Until the assessment fails</action>
+			<api>Assessment.MarkCompleted</api>
+		</item>
+		<item>
+			<action>Create an AssessmentRecommendationEngine</action>
+			<api>ITAEngine.CreateAssetRecommendationEngine</api>
+		</item>
+		<item>
+			<action>Get the asset recommendations list for the for the skill.</action>
+			<api>AssetRecommendationEngine.GetReccomendationsFor</api>
+		</item>
+		<item>
+			<action>Mark each asset type Y complete.</action>
+			<api>AssetRecommendation.GetAssetType, AssetRecommendationEngine.MarkCompleted</api>
+		</item>
+		<item>
+			<action> Create a new assessment for the first problem group. The same as above.</action>
+		</item>
+		<item>
+			<action>Mark problems completed successfully.</action>
+		</item>
+		<item>
+			<action>Begin a new assessment using problems from problem group 2 skill group 2.</action>
+		</item>
+		<item>
+			<action>Mark each problem as failed. Until the assessment fails</action>
+			<api>Assessment.MarkCompleted</api>
+		</item>
+		<item>
+			<action>Create an AssessmentRecommendationEngine</action>
+			<api>ITAEngine.CreateAssetRecommendationEngine</api>
+		</item>
+		<item>
+			<action>Get the asset recommendations list for the for the skill.</action>
+			<api>AssetRecommendationEngine.GetReccomendationsFor</api>
+			<observe>Verify that the assets presented are in order using problem group 2 first.</observe>
+			<api>AssetRecommendation.GetAssetType</api>
+		</item>
+		</procedures>
+	<results>Problems should not repeat until they've all been seen at least once.
+	</results>
+	<test_script>
+		<assessment problem_count = "5" mark_all = "false" expect_success="false" group_id="1"> 
+			<verify_skills list="A,B" />
+			<tutor choose_asset_type="Y" />
+		</assessment>
+		<assessment problem_count = "5" mark_all = "true" expect_success="true" group_id="1"> 
+			<verify_skills list="A,B" />
+		</assessment>
+		<assessment problem_count = "5" mark_all = "false" expect_success="false" group_id="2" > 
+			<verify_skills list="C,D" />
+			<tutor verify_type_order="Y" />
+		</assessment>
+	</test_script>
+	<test_data>
+		<problems>
+			<problem tags="A,B" isChallenge="false" UID="1"  GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="2"  GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="3"  GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="4"  GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="5"  GroupID="1"/>
+		</problems>
+		<problems>
+			<problem tags="C,D" isChallenge="false" UID="6"  GroupID="2"/>
+			<problem tags="C,D" isChallenge="false" UID="7"  GroupID="2"/>
+			<problem tags="C,D" isChallenge="false" UID="8"  GroupID="2"/>
+			<problem tags="C,D" isChallenge="false" UID="9"  GroupID="2"/>
+			<problem tags="C,D" isChallenge="false" UID="10" GroupID="2"/>
+		</problems>
+		<skills>
+			<skill name="test1" id="A">
+				<asset id="AA" type="Z"/>
+				<asset id="BB" type="Y"/>
+				<asset id="CC" type="X"/>
+			</skill>
+			<skill name="test2" id="B">
+				<asset id="DD" type="Z"/>
+				<asset id="EE" type="Y"/>
+				<asset id="FF" type="X"/>
+			</skill>
+			<skill name="test3" id="C">
+				<asset id="GG" type="Z"/>
+				<asset id="HH" type="Y"/>
+				<asset id="II" type="X"/>
+			</skill>
+			<skill name="test4" id="D">
+				<asset id="JJ" type="Z"/>
+				<asset id="KK" type="Y"/>
+				<asset id="LL" type="X"/>
+			</skill>
+			
+		</skills>
+	</test_data>
+</test>

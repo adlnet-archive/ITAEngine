@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4368D4DE-0CDB-49BC-851E-C7BA8ABC38ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ITAEngine</RootNamespace>
+    <AssemblyName>ITAEngine</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\AssemblyInfo.cs" />
+    <Compile Include="src\Assessment.cs" />
+    <Compile Include="src\AssessmentBuilder.cs" />
+    <Compile Include="src\AssetRecomendation.cs" />
+    <Compile Include="src\AssetRecommendationEngine.cs" />
+    <Compile Include="src\ITAEngineManager.cs" />
+    <Compile Include="src\Implementations\DefaultITAEngineManager.cs" />
+    <Compile Include="src\Implementations\DefaultAssessment.cs" />
+    <Compile Include="src\Structures\SkillScoreStructure.cs" />
+    <Compile Include="src\Implementations\Inner\Grader.cs" />
+    <Compile Include="src\Implementations\DefaultSkillScoreStructure.cs" />
+    <Compile Include="src\Implementations\Inner\ProblemDataManager.cs" />
+    <Compile Include="src\Implementations\DefaultAssessmentBuilder.cs" />
+    <Compile Include="src\Implementations\Inner\SkillsDataManager.cs" />
+    <Compile Include="src\Implementations\Inner\AssetsDataManager.cs" />
+    <Compile Include="src\Implementations\DefaultAssetRecommendationEngine.cs" />
+    <Compile Include="src\Callbacks\AssessmentActionResponse.cs" />
+    <Compile Include="src\Callbacks\AssessmentCompletionResponse.cs" />
+    <Compile Include="src\Callbacks\DataStorageDelegate.cs" />
+    <Compile Include="src\Implementations\Inner\AssetHeuristicEngine.cs" />
+    <Compile Include="src\Implementations\InnerInterfaces\IAssetHeuristicEngine.cs" />
+    <Compile Include="src\Implementations\Inner\ProblemLinkageManager.cs" />
+    <Compile Include="src\Implementations\Inner\GroupLinkageManager.cs" />
+    <Compile Include="src\Implementations\Inner\StopWatchManager.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\Structures\" />
+    <Folder Include="src\Implementations\" />
+    <Folder Include="src\Implementations\Inner\" />
+    <Folder Include="src\Callbacks\" />
+    <Folder Include="src\Implementations\InnerInterfaces\" />
+  </ItemGroup>
+</Project>

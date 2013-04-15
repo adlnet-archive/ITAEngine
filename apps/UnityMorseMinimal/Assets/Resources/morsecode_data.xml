@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test type="ExampleApp" name="MorseCode data">
+<test_data>
+<problems>
+	<problem tags="1" isChallenge="false" UID="1" GroupID="1" statement="E"/>
+	<problem tags="1" isChallenge="false" UID="2" GroupID="1" statement="EE"/>
+	<problem tags="1" isChallenge="false" UID="3" GroupID="1" statement="E E"/>
+	<problem tags="1" isChallenge="false" UID="4" GroupID="1" statement="EE E EE E"/>
+	<problem tags="1" isChallenge="false" UID="5" GroupID="1" statement="EEEE EEE EE E"/>
+	<problem tags="1" isChallenge="false" UID="6" GroupID="1" statement="E EEEE EE E"/>
+	<problem tags="1" isChallenge="true"  UID="7" GroupID="1" statement="E EEEE EE E"/>
+
+	<problem tags="2" isChallenge="false" UID="8"  GroupID="2" statement="A"/>
+	<problem tags="2" isChallenge="false" UID="9"  GroupID="2" statement="AA"/>
+	<problem tags="2" isChallenge="false" UID="10" GroupID="2" statement="A A"/>
+	<problem tags="2" isChallenge="false" UID="11" GroupID="2" statement="AA A AA A"/>
+	<problem tags="2" isChallenge="false" UID="12" GroupID="2" statement="AAA A AA A"/>
+	<problem tags="2" isChallenge="false" UID="13" GroupID="2" statement="A AAAA AA AAA"/>
+	<problem tags="2" isChallenge="true" UID="14" GroupID="2" statement="AAAA A AAAAA"/>
+
+	<problem tags="3" isChallenge="false" UID="15" GroupID="3" statement="I"/>
+	<problem tags="3" isChallenge="false" UID="16" GroupID="3" statement="I I"/>
+	<problem tags="3" isChallenge="false" UID="17" GroupID="3" statement="II"/>
+	<problem tags="3" isChallenge="false" UID="18" GroupID="3" statement="III II III I"/>
+	<problem tags="3" isChallenge="false" UID="19" GroupID="3" statement="I IIII IIII II"/>
+	<problem tags="3" isChallenge="false" UID="20" GroupID="3" statement="II II II II"/>
+	<problem tags="3" isChallenge="true"  UID="21" GroupID="3" statement="IIIII IIII IIIII"/>
+
+	<problem tags="4" isChallenge="false" UID="22" GroupID="4" statement="R"/>
+	<problem tags="4" isChallenge="false" UID="23" GroupID="4" statement="R R"/>
+	<problem tags="4" isChallenge="false" UID="24" GroupID="4" statement="RR"/>
+	<problem tags="4" isChallenge="false" UID="25" GroupID="4" statement="RRR RR RRRR"/>
+	<problem tags="4" isChallenge="false" UID="26" GroupID="4" statement="R RR RRR"/>
+	<problem tags="4" isChallenge="false" UID="27" GroupID="4" statement="R R R"/>
+	<problem tags="4" isChallenge="true"  UID="28" GroupID="4" statement="RRRR RR RRR R"/>
+
+	<problem tags="5" isChallenge="false" UID="29" GroupID="5" statement="S"/>
+	<problem tags="5" isChallenge="false" UID="30" GroupID="5" statement="SS"/>
+	<problem tags="5" isChallenge="false" UID="31" GroupID="5" statement="S S S"/>
+	<problem tags="5" isChallenge="false" UID="32" GroupID="5" statement="SSS SS SSSS"/>
+	<problem tags="5" isChallenge="false" UID="33" GroupID="5" statement="SS SSS SSSSS"/>
+	<problem tags="5" isChallenge="false" UID="34" GroupID="5" statement="S S S S"/>
+	<problem tags="5" isChallenge="true"  UID="35" GroupID="5" statement="SS SSSS S"/>
+
+	<problem tags="6" isChallenge="false" UID="36" GroupID="6" statement="T"/>
+	<problem tags="6" isChallenge="false" UID="37" GroupID="6" statement="T T"/>
+	<problem tags="6" isChallenge="false" UID="38" GroupID="6" statement="TTT TT T"/>
+	<problem tags="6" isChallenge="false" UID="39" GroupID="6" statement="TT TTT TT"/>
+	<problem tags="6" isChallenge="false" UID="40" GroupID="6" statement="T TTTT T"/>
+	<problem tags="6" isChallenge="false" UID="41" GroupID="6" statement="TTTTTT TTT T"/>
+	<problem tags="6" isChallenge="true"  UID="42" GroupID="6" statement="TTTT TTTTT"/>
+	
+</problems>
+
+<skills>
+	<skill name="Letter E" id="1">
+		<asset id="1">The letter E is equivalent to .</asset>
+		<asset id="2">A space is required between letters.  The \n
+				      characters EE are equivalent to . .</asset>
+		<asset id="3">The characters EEE are equivalent to . . .</asset>
+		<asset id="4">A space between words requries seven spaces between\n
+					  morse.  The characters is E E is equivalent\n
+				      to .       .</asset>
+		<asset id="5">A space between words requries seven spaces between\n
+				      morse. The characters is EE EE is equivalent\n
+				      to . .      . .</asset>
+	</skill>
+	<skill name="Letter A" id="2">
+		<asset id="6">The letter A is equivalent to .-</asset>
+		<asset id="7">A space is required between letters.  The characters\n
+			          AA are equivalent to .- .-</asset>
+		<asset id="8">The characters AAA are equivalent to .- .- .-</asset>
+		<asset id="9">A space between words requries seven spaces between\n
+				      morse.  The characters is A A is equivalent\n
+					  to .-       .-</asset>
+		<asset id="10">A space between words requries seven spaces between\n
+					   morse. The characters is AA AA is equivalent\n
+						to .- .-      .- .-</asset>
+	</skill>
+	<skill name="Letter I" id="3">
+		<asset id="11">The letter I is equivalent to ..</asset>
+		<asset id="12">A space is required between letters.  The characters \n
+					   II are equivalent to .. ..</asset>
+		<asset id="13">The characters III are equivalent to .. .. ..</asset>
+		<asset id="14">A space between words requries seven spaces between\n
+				       morse. The characters is I I is equivalent 
+				       to ..       ..</asset>
+		<asset id="15">A space between words requries seven spaces between\n
+					   morse.\nThe characters is II II is equivalent\n
+					   to .. ..      .. ..</asset>
+	</skill>
+
+	<skill name="Letter R" id="4">
+		<asset id="16">The letter R is equivalent to .-.</asset>
+		<asset id="17">A space is required between letters.  The characters\n
+				       RR are equivalent to .-. .-.</asset>
+		<asset id="18">The characters RRR are equivalent to .-. .-. .-.</asset>
+		<asset id="19">A space between words requries seven spaces between\n
+				       morse.\nThe characters is R R is equivalent\n
+				       to .-.       .-.</asset>
+		<asset id="20">A space between words requries seven spaces between\n
+					   morse.  The characters is RR R is equivalent\n
+					   to .-. .-.      .-. .-.</asset>
+	</skill>
+
+	<skill name="Letter S" id="5">
+		<asset id="21">The letter S is equivalent to ...</asset>
+		<asset id="22">A space is required between letters.  The characters\n
+				       SS are equivalent to ... ...</asset>
+		<asset id="23">The characters SS are equivalent to .-. .-. .-.</asset>
+		<asset id="24">A space between words requries seven spaces between\n
+					   morse.  The characters is S S is equivalent\n
+					   to ...       ...</asset>
+		<asset id="25">A space between words requries seven spaces between\n
+					   morse. The characters is SS SS is equivalent\n
+					   to ... ...      ... ...</asset>
+	</skill>
+
+	<skill name="Letter T" id="6">
+		<asset id="26">The letter T is equivalent to -</asset>
+		<asset id="27">A space is required between letters.  The characters\n
+					   TT are equivalent to - -</asset>
+		<asset id="28">The characters TTT are equivalent to - - -</asset>
+		<asset id="29">A space between words requries seven spaces between\n
+					   morse.  The characters is T T is equivalent\n
+					   to -       -</asset>
+		<asset id="30">A space between words requries seven spaces between\n
+					   morse.  The characters is TT TT is equivalent\n
+					   to - -      - -</asset>
+	</skill>
+</skills>
+</test_data>
+</test>

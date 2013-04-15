@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problems>
+	<problem tags="1" isChallenge="false" UID="1" GroupID="1" statement="E"/>
+	<problem tags="1" isChallenge="false" UID="2" GroupID="1" statement="EE"/>
+	<problem tags="1" isChallenge="false" UID="3" GroupID="1" statement="E E"/>
+	<problem tags="1" isChallenge="false" UID="4" GroupID="1" statement="EE E EE E"/>
+	<problem tags="1" isChallenge="false" UID="5" GroupID="1" statement="EEEE EEE EE E"/>
+	<problem tags="1" isChallenge="false" UID="6" GroupID="1" statement="E EEEE EE E"/>
+	<problem tags="1" isChallenge="true"  UID="7" GroupID="1" statement="E EEEE EE E"/>
+
+	<problem tags="2" isChallenge="false" UID="8"  GroupID="2" statement="A"/>
+	<problem tags="2" isChallenge="false" UID="9"  GroupID="2" statement="AA"/>
+	<problem tags="2" isChallenge="false" UID="10" GroupID="2" statement="A A"/>
+	<problem tags="2" isChallenge="false" UID="11" GroupID="2" statement="AA A AA A"/>
+	<problem tags="2" isChallenge="false" UID="12" GroupID="2" statement="AAA A AA A"/>
+	<problem tags="2" isChallenge="false" UID="13" GroupID="2" statement="A AAAA AA AAA"/>
+	<problem tags="2" isChallenge="true" UID="14" GroupID="2" statement="AAAA A AAAAA"/>
+
+	<problem tags="3" isChallenge="false" UID="15" GroupID="3" statement="I"/>
+	<problem tags="3" isChallenge="false" UID="16" GroupID="3" statement="I I"/>
+	<problem tags="3" isChallenge="false" UID="17" GroupID="3" statement="II"/>
+	<problem tags="3" isChallenge="false" UID="18" GroupID="3" statement="III II III I"/>
+	<problem tags="3" isChallenge="false" UID="19" GroupID="3" statement="I IIII IIII II"/>
+	<problem tags="3" isChallenge="false" UID="20" GroupID="3" statement="II II II II"/>
+	<problem tags="3" isChallenge="true"  UID="21" GroupID="3" statement="IIIII IIII IIIII"/>
+
+	<problem tags="4" isChallenge="false" UID="22" GroupID="4" statement="R"/>
+	<problem tags="4" isChallenge="false" UID="23" GroupID="4" statement="R R"/>
+	<problem tags="4" isChallenge="false" UID="24" GroupID="4" statement="RR"/>
+	<problem tags="4" isChallenge="false" UID="25" GroupID="4" statement="RRR RR RRRR"/>
+	<problem tags="4" isChallenge="false" UID="26" GroupID="4" statement="R RR RRR"/>
+	<problem tags="4" isChallenge="false" UID="27" GroupID="4" statement="R R R"/>
+	<problem tags="4" isChallenge="true"  UID="28" GroupID="4" statement="RRRR RR RRR R"/>
+
+	<problem tags="5" isChallenge="false" UID="29" GroupID="5" statement="S"/>
+	<problem tags="5" isChallenge="false" UID="30" GroupID="5" statement="SS"/>
+	<problem tags="5" isChallenge="false" UID="31" GroupID="5" statement="S S S"/>
+	<problem tags="5" isChallenge="false" UID="32" GroupID="5" statement="SSS SS SSSS"/>
+	<problem tags="5" isChallenge="false" UID="33" GroupID="5" statement="SS SSS SSSSS"/>
+	<problem tags="5" isChallenge="false" UID="34" GroupID="5" statement="S S S S"/>
+	<problem tags="5" isChallenge="true"  UID="35" GroupID="5" statement="SS SSSS S"/>
+
+	<problem tags="6" isChallenge="false" UID="36" GroupID="6" statement="T"/>
+	<problem tags="6" isChallenge="false" UID="37" GroupID="6" statement="T T"/>
+	<problem tags="6" isChallenge="false" UID="38" GroupID="6" statement="TTT TT T"/>
+	<problem tags="6" isChallenge="false" UID="39" GroupID="6" statement="TT TTT TT"/>
+	<problem tags="6" isChallenge="false" UID="40" GroupID="6" statement="T TTTT T"/>
+	<problem tags="6" isChallenge="false" UID="41" GroupID="6" statement="TTTTTT TTT T"/>
+	<problem tags="6" isChallenge="true"  UID="42" GroupID="6" statement="TTTT TTTTT"/>
+	
+</problems>

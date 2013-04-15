@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skills>
+	<skill name="Letter E" id="1">
+		<asset id="1">The letter E is equivalent to .</asset>
+		<asset id="2">A space is required between letters.  The characters EE are equivalent to . .</asset>
+		<asset id="3">The characters EEE are equivalent to . . .</asset>
+		<asset id="4">A space between words requries seven spaces between morse.\nThe characters is E E is equivalent to .       .</asset>
+		<asset id="5">A space between words requries seven spaces between morse.\nThe characters is EE EE is equivalent to . .      . .</asset>
+	</skill>
+	<skill name="Letter A" id="2">
+		<asset id="6">The letter A is equivalent to .-</asset>
+		<asset id="7">A space is required between letters.  The characters AA are equivalent to .- .-</asset>
+		<asset id="8">The characters AAA are equivalent to .- .- .-</asset>
+		<asset id="9">A space between words requries seven spaces between morse.\nThe characters is A A is equivalent to .-       .-</asset>
+		<asset id="10">A space between words requries seven spaces between morse.\nThe characters is AA AA is equivalent to .- .-      .- .-</asset>
+	</skill>
+	<skill name="Letter I" id="3">
+		<asset id="11">The letter I is equivalent to ..</asset>
+		<asset id="12">A space is required between letters.  The characters II are equivalent to .. ..</asset>
+		<asset id="13">The characters III are equivalent to .. .. ..</asset>
+		<asset id="14">A space between words requries seven spaces between morse.\nThe characters is I I is equivalent to ..       ..</asset>
+		<asset id="15">A space between words requries seven spaces between morse.\nThe characters is II II is equivalent to .. ..      .. ..</asset>
+	</skill>
+
+	<skill name="Letter R" id="4">
+		<asset id="16">The letter R is equivalent to .-.</asset>
+		<asset id="17">A space is required between letters.  The characters RR are equivalent to .-. .-.</asset>
+		<asset id="18">The characters RRR are equivalent to .-. .-. .-.</asset>
+		<asset id="19">A space between words requries seven spaces between morse.\nThe characters is R R is equivalent to .-.       .-.</asset>
+		<asset id="20">A space between words requries seven spaces between morse.\nThe characters is RR R is equivalent to .-. .-.      .-. .-.</asset>
+	</skill>
+
+	<skill name="Letter S" id="5">
+		<asset id="21">The letter S is equivalent to ...</asset>
+		<asset id="22">A space is required between letters.  The characters SS are equivalent to ... ...</asset>
+		<asset id="23">The characters SS are equivalent to .-. .-. .-.</asset>
+		<asset id="24">A space between words requries seven spaces between morse.\nThe characters is S S is equivalent to ...       ...</asset>
+		<asset id="25">A space between words requries seven spaces between morse.\nThe characters is SS SS is equivalent to ... ...      ... ...</asset>
+	</skill>
+
+	<skill name="Letter T" id="6">
+		<asset id="26">The letter T is equivalent to -</asset>
+		<asset id="27">A space is required between letters.  The characters TT are equivalent to - -</asset>
+		<asset id="28">The characters TTT are equivalent to - - -</asset>
+		<asset id="29">A space between words requries seven spaces between morse.\nThe characters is T T is equivalent to -       -</asset>
+		<asset id="30">A space between words requries seven spaces between morse.\nThe characters is TT TT is equivalent to - -      - -</asset>
+	</skill>
+</skills>

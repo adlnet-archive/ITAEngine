@@ -1,0 +1,78 @@
+<test type="functional" name="Randomization Assessment Problems">
+	<description>This test verifies that assessment problems are randomized. 
+	</description>
+	<data_description>The data set requires a 10 of problems.  The skill count and asset list required is minimal. The same data set from the No Duplicate Assessment Problems test can be used. 
+	</data_description>
+	<procedures>
+		<item>
+			<action>Load data into the ITAEngine.  This requires problem, skill, and asset data.</action>
+			<api>ITAEngine.AssociateAssessmentProblemsWithSkill, ITAEngine.AssociateAssetWithSkill </api>
+		</item>
+		<item>
+			<action>Create an assessment builder.</action>
+			<api>ITAEngine.CreateAssessmentBuilder</api>
+		</item>
+		<item>
+			<action>Set the number of problems to be used for the assessment to be 2.</action>
+			<api>AssessmentBuilder.AddProblem</api>
+		</item>
+		<item>
+			<action>Create an Assessment</action>
+			<api>AssessmentBuilder.Build</api>
+		</item>
+		<item>
+			<action>Get the problem sequence from the Assessment.</action>
+			<api>Assessment.GetProblemSequence</api>
+		</item>
+		<item>
+			<action>Mark each problem completed. Record the problem order for later use.</action>
+			<api>Assessment.MarkCompleted.</api>
+		</item>
+		<item>
+			<action>Perform Assessment cycle 5 times.</action>
+			<observe> Compare the sort order of the first 5 to the second 5.  Verify that they do not match</observe>
+		</item>
+		</procedures>
+	<results>Problems should not repeat until they've all been seen at least once.
+	</results>
+	
+	<test_script>
+		<assessment problem_count = "5" mark_all = "false" expect_success="false" group_id="1"> 
+			<verify_skills list="A,B" />
+		</assessment>
+		<assessment problem_count = "5" mark_all = "false" expect_success="false" group_id="1" check_dupes="true"> 
+			<verify_skills list="A,B" />
+		</assessment>
+		<assessment problem_count = "5" mark_all = "false" expect_success="false" group_id="1" check_dupes="true"> 
+			<verify_skills list="A,B" />
+		</assessment>
+		<assessment problem_count = "5" mark_all = "false" expect_success="false" group_id="1" check_dupes="true"> 
+			<verify_skills list="A,B" />
+		</assessment>
+		<assessment problem_count = "5" mark_all = "false" expect_success="false" group_id="1" check_dupes="false"> 
+			<verify_skills list="A,B" />
+		</assessment>
+	</test_script>
+	<test_data>
+		<problems>
+			<problem tags="A,B" isChallenge="false" UID="1"  GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="2"  GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="3"  GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="4"  GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="5"  GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="6"  GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="7"  GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="8"  GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="9"  GroupID="1"/>
+			<problem tags="A,B" isChallenge="false" UID="10" GroupID="1"/>
+		</problems>
+		<skills>
+			<skill name="test1" id="A">
+				<asset id="AA" type="Z"/>
+			</skill>
+			<skill name="test2" id="B">
+				<asset id="BB" type="Y"/>
+			</skill>
+		</skills>
+	</test_data>
+</test>

@@ -1,0 +1,64 @@
+Verson Descripton Document
+
+Version Number: 1.0.4
+Software Name: ITAEngine 
+Release Manager: Advanced Training & Learning Technology, LLC
+Date: 12/18/2012
+Changes:
+* Updated Assembly version numbers
+* Removed Get/Set Challenge from the Interfaces. This is an 
+  artifact of the MathGame and not needed for regular use.
+* Updated User Guide, MorseCode console game and uml diagrams
+  (state/class) removing use of Get/Set Challenge method.
+* Made DefaultAssessment.GetSkills return a unique set of 
+  skills.
+* Updated MorseCode CompletionResponse to be implemented.
+* Updated MorseCode ActionResponse to do do away with warning.
+* Filled out CompletionResponse for TestScriptCommon. Scoring
+  data is now printed with running functional tests.
+* Mono 2.6.7 compiler, MonoDevelop 3.0.4, and supporting files
+  are contained on the CD/DVD distribution.  Links to these
+  are provided in the doc/UserGuide/index.html
+
+--------------------------------------------------------------
+Version Number: 1.0.3
+Software Name: ITAEngine 
+Release Manager: Advanced Training & Learning Technology, LLC
+Date: 12/12/2012
+Changes:
+* Removed "Insert Stuff" from User Guide
+* Updated version number on assembly. 
+* Updated test plan descriptions for failure.xml, success.xml
+  order_assets_present_tutor.xml.
+
+--------------------------------------------------------------
+Version Number: 1.0.2
+Software Name: ITAEngine 
+Release Manager: Advanced Training & Learning Technology, LLC
+Date: 12/04/2012
+Changes:
+* Moved unit tests from ITAEngine to ITAEngineUnitTests.
+  Removes requirement for nunit.framekwork.dll from any app
+  using ITAEngine.dll.
+* Added ITAEngine project dependency to MorseCode project to 
+  fix build order.  Project will build in one pass. 
+* Removed all DLLs from build.
+* Added additional files to be removed when using
+  build-clean.bat.
+* Added unity file from free version that allows the game to 
+  run.
+--------------------------------------------------------------
+Software Name: ITAEngine 
+Version Number: 1.0.1
+Release Manager: Advanced Training & Learning Technology, LLC
+Date: 12/03/2012
+Changes:
+* Added Tutoring to the Unity Morse Code App.
+
+--------------------------------------------------------------
+Version Number: 1.0
+Release Manager: Advanced Training & Learning Technology, LLC
+Date: 11/30/2012
+
+Changes: 
+* Initial Baseline Release No Changes
